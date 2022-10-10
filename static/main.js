@@ -15,10 +15,10 @@ let shapeData = new ShapeData();
 
 let mapItems = [];
 
-let selectedCompany = "thsr";
+let selectedCompany = "THSR";
 
 window.onload = async function() {
-    await loadData("THSR", "main");
+    await loadData("thsr", "main");
     drawAll();
 }
 

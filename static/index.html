@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="utils.js"></script>
+    <style>
+      #container {
+        height: 100%;
+        width: 100%;
+      }
+      #map {
+        height: 100%;
+        width: calc(100% - 240px);
+        float: left;
+      }
+      #info_wrapper {
+        height: calc(100% - 40px);
+        width: 200px;
+        float: left;
+        padding: 20px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .add-delete-menu {
+        position: absolute;
+        background: white;
+        padding: 3px;
+        color: #666;
+        font-weight: bold;
+        border: 1px solid #999;
+        font-family: sans-serif;
+        font-size: 12px;
+        box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
+        margin-top: -10px;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+
+      select {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      button {
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      .delete-menu:hover {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="map"></div>
+      <div id="info_wrapper">
+        <select class="select", id="select-line" onchange="selectChange()">
+          <option value="THSR">THSR</option>
+          <option value="Keelung-Fangliao">Keelung-Fangliao</option>
+          <option value="Badu-Fangliao">Badu-Fangliao</option>
+          <option value="Zhunan-Changhua">Zhunan-Changhua</option>
+          <option value="Chenggong-Zhuifen">Chenggong-Zhuifen</option>
+          <option value="Ershui-Checheng">Ershui-Checheng</option>
+          <option value="Zhuzhong-Liujia">Zhuzhong-Liujia</option>
+          <option value="Neiwan-NorthHsinchu">Neiwan-NorthHsinchu</option>
+          <option value="Jingtong-Sandiaoling">Jingtong-Sandiaoling</option>
+          <option value="Badouzi-Ruifang">Badouzi-Ruifang</option>
+          <option value="Zhongzhou-Shalun">Zhongzhou-Shalun</option>
+          <option value="Suaoxin-Suao">Suaoxin-Suao</option>
+          <option value="TRTC-Dingpu-TNEC">Dingpu-TNEC</option>
+          <option value="TRTC-TaipeiZoo-TNEC">TaipeiZoo-TNEC</option>
+          <option value="TRTC-Qizhang-Xiaobitan">Qizhang-Xiaobitan</option>
+          <option value="TRTC-Xindian-Songshan">Xindian-Songshan</option>
+          <option value="TRTC-Nanshijiao-Huilong">Nanshijiao-Huilong</option>
+          <option value="TRTC-Daqiaotou-Luzhou">Daqiaotou-Luzhou</option>
+          <option value="TRTC-Tamsui-Xiangshan">Tamsui-Xiangshan</option>
+          <option value="TRTC-Beitou-Xinbeitou">Beitou-Xinbeitou</option>
+          <option value="TRTC-Dapinglin-NTIP">Dapinglin-NTIP</option>
+          <option value="KRTC-O">KRTC-O</option>
+          <option value="KRTC-R">KRTC-R</option>
+          <option value="TYMC-A">TYMC-A</option>
+          <option value="TMRT-G">TMRT-G</option>
+          <option value="KLRT-C">KLRT-C</option>
+          <option value="NTDLRT-Hongshulin-Kanding">Hongshulin-Kanding</option>
+          <option value="NTDLRT-Binhai_Shalun-TFW">Binhai_Shalun-TFW</option>
+        </select>
+
+        <select class="select" id="select-type" onchange="mapTypeChange()">
+          <option value="Speed">Speed</option>
+          <option value="Shape">Shape</option>
+          <option value="Station">Station</option>
+        </select>
+
+        <div id="info_wrapper_inner"></div>
+
+        <button id="download" onclick="download()">download</button>
+      </div>
+
+      
+    </div>
+    
+    
+    <script src="shapeData.js"></script>
+    <script src="loader.js"></script>
+    <script src="main.js"></script>
+    <script src="mapMenu.js"></script>
+    <script src="speed.js"></script>
+    <script src="shape.js"></script>
+
+  </body>
+</html>

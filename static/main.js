@@ -15,7 +15,7 @@ let shapeData = new ShapeData();
 
 let mapItems = [];
 
-let selectedCompany = "THSR";
+let selectedCompany = "thsr";
 
 window.onload = async function() {
     await loadData("THSR", "main");
@@ -28,28 +28,28 @@ async function selectChange() {
 
     if (selectValue == "THSR") {
         selectedCompany = "THSR";
-        await loadData("THSR", "main");
+        await loadData("thsr", "main");
     } else if (selectValue.startsWith('TRTC')) {
         selectedCompany = "TRTC";
-        await loadData("TRTC", selectValue.slice(5));
+        await loadData("trtc", selectValue.slice(5));
     } else if (selectValue.startsWith('KRTC')) {
         selectedCompany = "KRTC";
-        await loadData("KRTC", selectValue.slice(5));
+        await loadData("krtc", selectValue.slice(5));
     } else if (selectValue.startsWith('TYMC')) {
         selectedCompany = "TYMC";
-        await loadData("TYMC", selectValue.slice(5));
+        await loadData("tymc", selectValue.slice(5));
     } else if (selectValue.startsWith('TMRT')) {
         selectedCompany = "TMRT";
-        await loadData("TMRT", selectValue.slice(5));
+        await loadData("tmrt", selectValue.slice(5));
     } else if (selectValue.startsWith('KLRT')) {
         selectedCompany = "KLRT";
-        await loadData("KLRT", selectValue.slice(5));
+        await loadData("klrt", selectValue.slice(5));
     } else if (selectValue.startsWith('NTDLRT')) {
         selectedCompany = "NTDLRT";
-        await loadData("NTDLRT", selectValue.slice(7));
+        await loadData("ntdlrt", selectValue.slice(7));
     } else {
         selectedCompany = "TRA";
-        await loadData("TRA", selectValue);
+        await loadData("tra", selectValue);
     }
 
     drawAll();

@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-    window.onload = function() {
-        const userAgent = navigator.userAgent;
-        if(/android/i.test(userAgent)){
-            window.location.href = "https://play.google.com/store/apps/details?id=com.transtaiwan.railwayapp"
-        } else if(/iPad|iPhone|iPod/i.test(userAgent)){
-            window.location.href = "https://apps.apple.com/us/app/transtaiwan/id1574165408"
-        } else {
-            window.location.href = 'https://blog.transtaiwan.com';
+<head>
+    <meta property="og:title" content="TransTaiwan: 雙鐵/捷運 時刻表 路徑規劃">
+    <meta property="og:image" content="og_image.png">
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function() {
+            const userAgent = navigator.userAgent;
+            if(/android/i.test(userAgent)){
+                window.location.href = "https://play.google.com/store/apps/details?id=com.transtaiwan.railwayapp"
+            } else if(/iPad|iPhone|iPod/i.test(userAgent)){
+                window.location.href = "https://apps.apple.com/us/app/transtaiwan/id1574165408"
+            } else {
+                window.location.href = 'https://blog.transtaiwan.com';
+            }
         }
-        
-    }
-</script>
+    </script>
+</body>

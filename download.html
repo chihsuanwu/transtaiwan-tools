@@ -5,8 +5,11 @@
 </head>
 <body>
     <script type="text/javascript">
-        window.onload = function() {
+        window.onload = async function() {
             const userAgent = navigator.userAgent;
+            
+            await new Promise(r => setTimeout(r, 100));
+
             if(/android/i.test(userAgent)){
                 window.location.href = "https://play.google.com/store/apps/details?id=com.transtaiwan.railwayapp"
             } else if(/iPad|iPhone|iPod/i.test(userAgent)){

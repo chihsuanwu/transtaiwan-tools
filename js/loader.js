@@ -7,21 +7,21 @@ async function loadData(company, line) {
 }
   
 async function loadLine(company, lineName) {
-    let path = `${company}/line.json`;
+    let path = `data/${company}/line.json`;
     const result = await fetch(path);
     const jsonData = await result.json();
     return jsonData.find((e) => e["name"] == lineName);
 }
   
 async function loadSpeed(company, lineName) {
-    let path = `${company}/speed.json`;
+    let path = `data/${company}/speed.json`;
     const result = await fetch(path);
     const jsonData = await result.json();
     return jsonData.find((e) => e["name"] == lineName);
 }
   
 async function loadStation(company, lineName) {
-    let path = `${company}/station.json`;
+    let path = `data/${company}/station.json`;
     const result = await fetch(path);
     const jsonData = await result.json();
     return jsonData.filter((e) => e["line"].includes(lineName));

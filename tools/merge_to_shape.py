@@ -80,13 +80,13 @@ def mergeMain():
     keys = ['klrt']
     for key in keys:
         print(key)
-        lineJson = readJson(f"docs/{key}/line.json")
-        speedJson = readJson(f"docs/{key}/speed.json")
-        stationJson = readJson(f"docs/{key}/station.json")
+        lineJson = readJson(f"../{key}/line.json")
+        speedJson = readJson(f"../{key}/speed.json")
+        stationJson = readJson(f"../{key}/station.json")
 
         origin = mergeToOrigin(lineJson, speedJson, stationJson)
 
-        saveJson(f"docs/{key}/shape.json", origin)
+        saveJson(f"../{key}/shape.json", origin)
 
 
 

@@ -1,0 +1,47 @@
+[
+    {
+        "company": "TRTC",
+        "name": "R",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "G",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "O",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "BL",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "BR",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "Y",
+        "expandable": true
+    },
+    {
+        "company": "TRTC",
+        "name": "R22A",
+        "expandable": false
+    },
+    {
+        "company": "TRTC",
+        "name": "G03A",
+        "expandable": false
+    },
+    {
+        "company": "TYMC",
+        "name": "A",
+        "expandable": false
+    }
+]

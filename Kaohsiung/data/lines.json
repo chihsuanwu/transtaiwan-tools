@@ -2,16 +2,19 @@
     {
         "company": "KRTC",
         "name": "R",
-        "expandable": true
+        "expandable": true,
+        "zIndex": 0
     },
     {
         "company": "KRTC",
         "name": "O",
-        "expandable": true
+        "expandable": true,
+        "zIndex": 0
     },
     {
         "company": "KLRT",
         "name": "C",
-        "expandable": true
+        "expandable": true,
+        "zIndex": 1
     }
 ]

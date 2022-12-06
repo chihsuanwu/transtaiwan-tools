@@ -4,7 +4,7 @@ const DRAW = "ZH";
 // const DRAW = "EN";
 // const DRAW = "JA";
 
-let company = 'krtc';
+let company = 'trtc';
 
 window.onload = async () => {
     document.querySelector(`#btn-${company}`).classList.add('selected');

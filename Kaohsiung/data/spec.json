@@ -1,5 +1,6 @@
 {
     "width": 1460,
     "height": 1720,
-    "center": [500, 1000]
+    "center": [500, 1000],
+    "camera_init": [500, 1000]
 }

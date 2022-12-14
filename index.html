@@ -1,60 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/utils.js"></script>
-    <style>
-      #container {
-        height: 100%;
-        width: 100%;
-      }
-      #map {
-        height: 100%;
-        width: calc(100% - 240px);
-        float: left;
-      }
-      #info_wrapper {
-        height: calc(100% - 40px);
-        width: 200px;
-        float: left;
-        padding: 20px;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      .add-delete-menu {
-        position: absolute;
-        background: white;
-        padding: 3px;
-        color: #666;
-        font-weight: bold;
-        border: 1px solid #999;
-        font-family: sans-serif;
-        font-size: 12px;
-        box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.3);
-        margin-top: -10px;
-        margin-left: 10px;
-        cursor: pointer;
-      }
-
-      select {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      button {
-        position: absolute;
-        right: 20px;
-        bottom: 20px;
-      }
-
-      .delete-menu:hover {
-        background: #eee;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="container">
+      <div id="header">
+        TransTaiwan 線型產生器
+
+        <a href="https://github.com/chihsuanwu/transtaiwan-line-shape">
+        <i class="fa fa-github"  style="color:black; font-size:36px; float:right;"></i>
+        </a>
+
+      </div>
+
       <div id="map"></div>
       <div id="info_wrapper">
         <select class="select", id="select-line" onchange="selectChange()">
@@ -99,10 +60,10 @@
         <button id="download" onclick="download()">download</button>
       </div>
 
-      
+
     </div>
-    
-    
+
+
     <script src="js/shapeData.js"></script>
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>

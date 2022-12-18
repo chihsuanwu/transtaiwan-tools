@@ -4,7 +4,7 @@ import polyline
 
 def readJson(fileName):
     with open(fileName, "r") as f:
-        originJson = json.load(f) 
+        originJson = json.load(f)
         return originJson
 
 
@@ -14,7 +14,7 @@ def saveJson(fileName, newJson):
 
 
 def mergeToOrigin(lineJson: list, speedJson: list, stationJson: list):
-    
+
     lineNames = [l["name"] for l in lineJson]
 
     lineAndSpeed = []
@@ -66,7 +66,7 @@ def mergeToOrigin(lineJson: list, speedJson: list, stationJson: list):
             "latlng": polyline.encode([latlng]),
             "index": indexBasedData
         }
-        
+
     return {
         "lines": lineAndSpeed,
         "station": stationDict
@@ -76,17 +76,16 @@ def mergeToOrigin(lineJson: list, speedJson: list, stationJson: list):
 
 
 def mergeMain():
-    # keys = ["tra", "thsr", 'trtc', 'krtc', 'tymc', 'tmrt', 'klrt', 'ntdlrt']
-    keys = ['klrt']
+    keys = ["tra", "thsr", 'trtc', 'krtc', 'tymc', 'tmrt', 'klrt', 'ntdlrt']
     for key in keys:
         print(key)
-        lineJson = readJson(f"../{key}/line.json")
-        speedJson = readJson(f"../{key}/speed.json")
-        stationJson = readJson(f"../{key}/station.json")
+        lineJson = readJson(f"../data/{key}/line.json")
+        speedJson = readJson(f"../data/{key}/speed.json")
+        stationJson = readJson(f"../data/{key}/station.json")
 
         origin = mergeToOrigin(lineJson, speedJson, stationJson)
 
-        saveJson(f"../{key}/shape.json", origin)
+        saveJson(f"../data/{key}/shape.json", origin)
 
 
 

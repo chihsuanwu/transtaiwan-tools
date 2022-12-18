@@ -1,0 +1,45 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    /* width: 100%; */
+    background-color: #2F5597;
+    font-size: 26px;
+    font-family: sans-serif;
+    color: white;
+    padding: 8px;
+    margin: 0, auto;
+    height: 36px;
+    text-align: center;
+}
+
+#content {
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: auto;
+}
+
+#company-wrapper {
+    position: absolute;
+    right: 0;
+    top: 54px;
+    margin-right: 48px;
+    margin-top: 32px;
+}
+
+#company-wrapper button {
+    border-radius: 16px;
+    border-color: rgb(230, 244, 255);
+    margin: 16px;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+}
+
+#company-wrapper button.selected {
+    border-color: chartreuse;
+    font-weight: bold;
+}

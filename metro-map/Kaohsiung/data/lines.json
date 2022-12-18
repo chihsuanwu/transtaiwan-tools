@@ -1,0 +1,20 @@
+[
+    {
+        "company": "KRTC",
+        "name": "R",
+        "expandable": true,
+        "zIndex": 0
+    },
+    {
+        "company": "KRTC",
+        "name": "O",
+        "expandable": true,
+        "zIndex": 0
+    },
+    {
+        "company": "KLRT",
+        "name": "C",
+        "expandable": true,
+        "zIndex": 1
+    }
+]

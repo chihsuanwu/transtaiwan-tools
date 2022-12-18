@@ -1,4 +1,4 @@
-const MODE = 'LOCAL';
+const MODE = 'REMOTE';
 
 const DRAW = "ZH";
 // const DRAW = "EN";

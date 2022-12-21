@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="header">
+TransTaiwan 車型對照表
+
+<a href="https://github.com/chihsuanwu/transtaiwan-train-series">
+    <i class="fa fa-github" style="color:black; font-size:36px; float:right;"></i>
+</a>
+
+</div>
+
+<div id="container">
+  <div id = "select-wrapper"></div>
+  <div id = "specified"></div>
+  <div id = "other"></div>
+</div>
+
+<!-- data source selector  -->
+<div id="data-source-selector">
+  <div id="data-source-selector-title">資料來源</div>
+  <div id="data-source-selector-content">
+    <div>
+      <input id="data-source-selector-server" type="radio" name="data-source" value="server" checked>
+      <label for="data-source-selector-content-1-1">TransTaiwan Server</label>
+    </div>
+    <div>
+      <input id="data-source-selector-local" type="radio" name="data-source" value="local">
+      <label for="data-source-selector-content-2-1">Local</label>
+    </div>
+  </div>
+</div>
+
+<div id = "footer">
+  <p>2.1.5版後適用</p>
+  <p>© 2022 TransTaiwan. All rights reserved.</p>
+</div>
+
+
+<script src="js/loader.js"></script>
+<script src="js/render.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+[
+    {
+        "name": "電氣化支線",
+        "train": [
+            {
+                "readable": "17XX",
+                "regex": "17[0-9]{2}",
+                "series": [
+                    "EMU600"
+                ]
+            },
+            {
+                "readable": "37XX",
+                "regex": "37[0-9]{2}",
+                "series": [
+                    "EMU500",
+                    "EMU600"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "非電化支線",
+        "train": [
+            {
+                "readable": "47XX",
+                "regex": "47[0-9]{2}",
+                "series": [
+                    "DR1000"
+                ]
+            },
+            {
+                "readable": "18XX",
+                "regex": "18[0-9]{2}",
+                "series": [
+                    "DR1000"
+                ]
+            },
+            {
+                "readable": "27XX",
+                "regex": "27[0-9]{2}",
+                "series": [
+                    "DR1000"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "海線",
+        "train": [
+            {
+                "readable": "25XX",
+                "regex": "25[0-9]{2}",
+                "series": [
+                    "EMU500"
+                ]
+            }
+        ]
+    },
+    {
+        "name": "臺東線",
+        "train": [
+            {
+                "readable": "45XX",
+                "regex": "45[0-9]{2}",
+                "series": [
+                    "EMU500"
+                ]
+            }
+        ]
+    }
+]

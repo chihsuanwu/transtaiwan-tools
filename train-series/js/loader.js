@@ -23,11 +23,11 @@ async function loadData() {
 }
 
 async function loadLocalSpecifiedData() {
-    const dateList = await (await fetch(`/data/specified/date.json`)).json();
+    const dateList = await (await fetch(`data/specified/date.json`)).json();
     let specifiedData = [];
     for (const date of dateList) {
         const name = date["filename"];
-        const data = await (await fetch(`/data/specified/${name}`)).json();
+        const data = await (await fetch(`data/specified/${name}`)).json();
         specifiedData.push({
             "from": date["from"],
             "to": date["to"],
@@ -39,6 +39,6 @@ async function loadLocalSpecifiedData() {
 }
 
 async function loadLocalOtherData() {
-    const data = await (await fetch(`/data/other.json`)).json();
+    const data = await (await fetch(`data/other.json`)).json();
     return data;
 }

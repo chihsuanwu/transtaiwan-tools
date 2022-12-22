@@ -28,7 +28,7 @@ def main():
         'other': other
     }
 
-    result = str(result).replace("'", '"').replace(' ', '').replace('\n', '')
+    result = json.dumps(result, ensure_ascii=False).replace(' ', '').replace('\n', '')
 
     with open('../data.json', 'w', encoding='utf-8') as f:
         f.write(result)

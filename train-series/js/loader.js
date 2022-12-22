@@ -1,9 +1,8 @@
 async function loadData() {
 
     if (DATA_SOURCE === "LOCAL") {
-        const root = MODE == "DEPLOY" ? "train-series" : "";
-        const specifiedData = await loadLocalSpecifiedData(root);
-        const otherData = await loadLocalOtherData(root);
+        const specifiedData = await loadLocalSpecifiedData();
+        const otherData = await loadLocalOtherData();
 
         console.log(specifiedData);
         console.log(otherData);
@@ -23,12 +22,12 @@ async function loadData() {
     return await data.json();
 }
 
-async function loadLocalSpecifiedData(root) {
-    const dateList = await (await fetch(`${root}/data/specified/date.json`)).json();
+async function loadLocalSpecifiedData() {
+    const dateList = await (await fetch(`/data/specified/date.json`)).json();
     let specifiedData = [];
     for (const date of dateList) {
         const name = date["filename"];
-        const data = await (await fetch(`${root}/data/specified/${name}`)).json();
+        const data = await (await fetch(`/data/specified/${name}`)).json();
         specifiedData.push({
             "from": date["from"],
             "to": date["to"],
@@ -39,7 +38,7 @@ async function loadLocalSpecifiedData(root) {
     return specifiedData;
 }
 
-async function loadLocalOtherData(root) {
-    const data = await (await fetch(`${root}/data/other.json`)).json();
+async function loadLocalOtherData() {
+    const data = await (await fetch(`/data/other.json`)).json();
     return data;
 }

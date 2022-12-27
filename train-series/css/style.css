@@ -44,6 +44,12 @@ table {
     border: 2px solid #2F5597;
 }
 
+@media screen and (max-width: 900px) {
+    table {
+        width: 100%;
+    }
+}
+
 th {
     background-color: #0097fb;
 }
